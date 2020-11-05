@@ -15,8 +15,15 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	runtimeOnly 'org.apache.derby:derby'
+	//runtimeOnly 'org.apache.derby:derby'
+	runtimeOnly 'mysql:mysql-connector-java'
+
+	//implementation 'org.springframework.boot:spring-boot-starter-validation'
 	//compileOnly 'org.springframework.boot:spring-boot-devtools'
+
+	//testRuntimeOnly group: 'com.h2database', name: 'h2', version: '1.4.200'
+
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
@@ -24,4 +31,9 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+
+bootBuildImage {
+	imageName = "spring-boot-docker"
 }
