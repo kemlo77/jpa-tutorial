@@ -14,10 +14,17 @@ public class CourseRepositoryTest {
     private CourseRepository courseRepository;
 
     @Test
-    public void testFindAll() {
+    public void findAllTest() {
         Iterable<Course> courses = courseRepository.findAll();
         long numberOfCourses = StreamSupport.stream(courses.spliterator(), false).count();
-        assertEquals(1, numberOfCourses);
+        assertEquals(3, numberOfCourses);
+    }
+
+    @Test
+    public void findByTopicIdTest() {
+        Iterable<Course> courses = courseRepository.findByTopicId("cesar");
+        long numberOfCourses = StreamSupport.stream(courses.spliterator(), false).count();
+        assertEquals(2, numberOfCourses);
     }
 
 }

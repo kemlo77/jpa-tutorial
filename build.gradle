@@ -18,8 +18,8 @@ dependencies {
 
 
 	//runtimeOnly 'org.apache.derby:derby'
-	runtimeOnly 'com.h2database:h2'
-	//runtimeOnly 'mysql:mysql-connector-java'
+	//runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'mysql:mysql-connector-java'
 
 	//implementation 'org.springframework.boot:spring-boot-starter-validation'
 	//compileOnly 'org.springframework.boot:spring-boot-devtools'
